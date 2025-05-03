@@ -1,0 +1,13 @@
+services:
+  calculadora:
+    image: calculadora-propina
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
