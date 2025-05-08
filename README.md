@@ -1,54 +1,51 @@
-# React + TypeScript + Vite
+# 🍕 Calculadora de Propinas y Consumos - React + TypeScript + Docker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una **calculadora de propinas y consumos** para un restaurante, desarrollada con **React** y **TypeScript**. Está preparado para ejecutarse en contenedores usando **Docker** y `docker-compose`.
 
-Currently, two official plugins are available:
+## ✨ Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Menú interactivo con selección de productos y precios
+- Cálculo automático del consumo total
+- Selección de porcentaje de propina (10%, 20%, 50%)
+- Total a pagar actualizado en tiempo real
+- Opción para eliminar productos del consumo
+- Simulación de guardado de orden (aún sin conexión a APIs)
+- Proyecto completamente escrito en TypeScript
+- Uso de:
+  - Componentes tipados
+  - Helpers reutilizables
+  - Hooks personalizados
+  - Tipos centralizados
 
-## Expanding the ESLint configuration
+## 🖼️ Vista previa
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+> El usuario puede seleccionar productos del menú, visualizar el subtotal, aplicar una propina y guardar la orden. Luego puede volver a iniciar una nueva orden.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+👉 **[Ver aplicación en línea](https://681c2a374d92cb798810a0b0--pereza-calculadora-propina.netlify.app/)**
+
+---
+
+## 📦 Requisitos
+
+- [Docker](https://www.docker.com/)
+- [Docker Compose](https://docs.docker.com/compose/)
+
+---
+
+## ⚙️ Instalación
+
+1. Clona el repositorio:
+
+```bash
+git clone https://github.com/tu-usuario/calculadora-propinas.git
+cd calculadora-propinas
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+2. Ejecutar ese comando por consola:
+```bash
+docker compose build && docker compose up
+```
+3. Abre el navegador y direcciona a esta link:
+Abre el navegador en:
+```bash
+👉 http://localhost:5000
 ```
